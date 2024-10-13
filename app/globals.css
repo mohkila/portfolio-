@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #111827;
+  color: aliceblue;
+}
+
+@layer components {
+  .nav_link {
+    @apply relative text-base font-medium w-fit block 
+after:block after:content-[''] after:absolute after:h-[3px]
+after:bg-yellow-500 text-white after:w-full
+after:hover:scale-x-100 after:transition after:duration-300
+after:origin-right after:scale-x-0;
+  }
+  .text-bg {
+    background-image: linear-gradient(
+      to right,
+      #8750f7 0%,
+      #b54200 50%,
+      #ffffff 70%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #1d4ed8;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #6b8bf3;
+    border-radius: 40px;
+    border: 2px solid #ff5100;
+  }
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+/* .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+} */
